@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, View } from "react-native";
+import { SafeAreaView, ScrollView, Text, View } from "react-native";
 import { Card, HeadingText, RegularText } from "../components/global";
 import { UIComponentsList } from "../constants/data";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
@@ -37,7 +37,7 @@ export default function WelcomeScreen() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
-      <View style={{ padding: 20 }}>
+      <ScrollView style={{ padding: 20 }}>
         <View style={{ gap: 8 }}>
           <HeadingText style={{ color: "#000" }}>
             Welcome to Expo UI
@@ -64,7 +64,7 @@ export default function WelcomeScreen() {
             />
           ))}
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
