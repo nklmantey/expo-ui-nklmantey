@@ -2,12 +2,18 @@ import { SafeAreaView, View } from "react-native";
 import { HeadingText, RegularText, SubHeadingText } from "../components/global";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { Input } from "../components/ui";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function InputScreen() {
   const { params }: RouteProp<RootStackParamList> = useRoute();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setProgress(82), 5000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>

@@ -15,4 +15,10 @@ export const UIComponentsList: UIComponentsListType[] = [
     name: "Alert",
     description: "A succinct message that is displayed temporarily.",
   },
+  {
+    id: 4,
+    name: "Progress",
+    description:
+      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+  },
 ];

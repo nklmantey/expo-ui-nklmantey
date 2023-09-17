@@ -6,6 +6,35 @@ import { NavigationProp, useNavigation } from "@react-navigation/native";
 export default function WelcomeScreen() {
   const { navigate }: NavigationProp<RootStackParamList> = useNavigation();
 
+  const componentActions: {
+    [key: string]: (component: UIComponentsListType) => void;
+  } = {
+    Button: (component) =>
+      navigate("ButtonScreen", {
+        data: {
+          description: component.description,
+        },
+      }),
+    Input: (component) =>
+      navigate("InputScreen", {
+        data: {
+          description: component.description,
+        },
+      }),
+    Alert: (component) =>
+      navigate("AlertScreen", {
+        data: {
+          description: component.description,
+        },
+      }),
+    Progress: (component: UIComponentsListType) =>
+      navigate("ProgressScreen", {
+        data: {
+          description: component.description,
+        },
+      }),
+  };
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
       <View style={{ padding: 20 }}>
@@ -14,12 +43,8 @@ export default function WelcomeScreen() {
             Welcome to Expo UI
           </HeadingText>
           <RegularText style={{ color: "#000", lineHeight: 18 }}>
-            Here is a boring repo for all the UI components I want to reuse
-            across different apps because I'm a lazy dev 👨🏽‍💻
-          </RegularText>
-          <RegularText style={{ color: "#000", lineHeight: 18 }}>
-            Design inspiration is heavily influenced by Vercel's design system
-            and shadcn ui 🤩
+            A repo dump for my reusable UI components across different apps,
+            design inspiration from Vercel's design system and shadcn ui 🧑🏽‍💻🤩
           </RegularText>
         </View>
 
@@ -35,25 +60,7 @@ export default function WelcomeScreen() {
             <Card
               key={component.id}
               component={component}
-              onPress={() =>
-                component.name === "Button"
-                  ? navigate("ButtonScreen", {
-                      data: {
-                        description: component.description,
-                      },
-                    })
-                  : component.name === "Input"
-                  ? navigate("InputScreen", {
-                      data: {
-                        description: component.description,
-                      },
-                    })
-                  : navigate("AlertScreen", {
-                      data: {
-                        description: component.description,
-                      },
-                    })
-              }
+              onPress={() => componentActions[component.name](component)}
             />
           ))}
         </View>

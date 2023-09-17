@@ -21,6 +21,13 @@ type RootStackParamList = {
           description: string;
         };
       };
+  ProgressScreen:
+    | undefined
+    | {
+        data: {
+          description: string;
+        };
+      };
 };
 
 type UIComponentsListType = {
