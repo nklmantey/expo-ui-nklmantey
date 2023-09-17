@@ -2,7 +2,8 @@ import { SafeAreaView, View } from "react-native";
 import { HeadingText, RegularText, SubHeadingText } from "../components/global";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { Progress } from "../components/ui";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Alert } from "../components/ui/Alert";
 
 function incrementProgressContinuously(callback: any) {
   let uploadProgress = 0;
@@ -25,10 +26,27 @@ function incrementProgressContinuously(callback: any) {
 export default function ProgressScreen() {
   const { params }: RouteProp<RootStackParamList> = useRoute();
   const [progress, setProgress] = useState(0);
+  const alertRef = useRef<any>(null);
 
   const handleProgressChange = (newValue: number) => {
     if (newValue > progress) {
       setProgress(newValue); // Update the progress
+    }
+
+    if (newValue === 40) {
+      alertRef.current?.showAlert({
+        title: "Upload almost complete",
+        message: "Your photo upload is halfway complete 😀",
+        duration: 5000,
+      });
+    }
+
+    if (newValue === 100) {
+      alertRef.current?.showAlert({
+        title: "Upload complete",
+        message: "Your photo was successfully uploaded to the cloud",
+        duration: 5000,
+      });
     }
   };
 
@@ -38,6 +56,8 @@ export default function ProgressScreen() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
+      <Alert ref={alertRef} />
+
       <View style={{ padding: 20 }}>
         <View style={{ gap: 8 }}>
           <HeadingText style={{ color: "#000" }}>Progress</HeadingText>
@@ -51,7 +71,7 @@ export default function ProgressScreen() {
             <SubHeadingText>
               Basic progress bar without percentage label
             </SubHeadingText>
-            <View style={{ marginTop: 8 }}>
+            <View style={{ marginTop: 8, gap: 4 }}>
               <Progress value={progress} />
             </View>
           </View>

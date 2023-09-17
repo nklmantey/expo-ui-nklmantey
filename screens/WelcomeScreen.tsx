@@ -42,10 +42,26 @@ export default function WelcomeScreen() {
           <HeadingText style={{ color: "#000" }}>
             Welcome to Expo UI
           </HeadingText>
-          <RegularText style={{ color: "#000", lineHeight: 18 }}>
-            A repo dump for my reusable UI components across different apps,
-            design inspiration from Vercel's design system and shadcn ui 🧑🏽‍💻🤩
-          </RegularText>
+
+          <View
+            style={{
+              backgroundColor: "#000",
+              width: "100%",
+              padding: 20,
+              borderRadius: 4,
+              alignItems: "flex-start",
+              justifyContent: "flex-start",
+              shadowColor: "#000",
+              shadowOpacity: 100,
+              shadowRadius: 15,
+              shadowOffset: { width: 0, height: 5 },
+            }}
+          >
+            <RegularText style={{ color: "#fff", fontSize: 12 }}>
+              A repo dump for my reusable UI components across different apps,
+              design inspiration from Vercel's design system and shadcn ui 🧑🏽‍💻🤩
+            </RegularText>
+          </View>
         </View>
 
         <View

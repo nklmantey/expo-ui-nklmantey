@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { View } from "react-native";
+import { RegularText } from "../global";
 
 type ProgressProps = {
   value: number;
