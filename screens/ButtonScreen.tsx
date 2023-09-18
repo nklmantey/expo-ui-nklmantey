@@ -1,5 +1,10 @@
 import { SafeAreaView, View } from "react-native";
-import { HeadingText, RegularText, SubHeadingText } from "../components/global";
+import {
+  Header,
+  HeadingText,
+  RegularText,
+  SubHeadingText,
+} from "../components/global";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { Button } from "../components/ui";
 import { Ionicons } from "@expo/vector-icons";
@@ -10,14 +15,9 @@ export default function ButtonScreen() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
       <View style={{ padding: 20 }}>
-        <View style={{ gap: 8 }}>
-          <HeadingText style={{ color: "#000" }}>Button</HeadingText>
-          <RegularText style={{ color: "#000" }}>
-            {params?.data.description}
-          </RegularText>
-        </View>
+        <Header title="Button" description={params?.data.description} />
 
-        <View style={{ marginTop: 40, gap: 32 }}>
+        <View style={{ marginTop: 40, gap: 40 }}>
           <View>
             <SubHeadingText>Button with different variants</SubHeadingText>
             <View style={{ marginTop: 8, gap: 8 }}>

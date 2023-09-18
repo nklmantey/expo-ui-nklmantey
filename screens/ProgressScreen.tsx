@@ -1,5 +1,10 @@
 import { SafeAreaView, View } from "react-native";
-import { HeadingText, RegularText, SubHeadingText } from "../components/global";
+import {
+  Header,
+  HeadingText,
+  RegularText,
+  SubHeadingText,
+} from "../components/global";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { Progress } from "../components/ui";
 import { useEffect, useRef, useState } from "react";
@@ -59,20 +64,22 @@ export default function ProgressScreen() {
       <Alert ref={alertRef} />
 
       <View style={{ padding: 20 }}>
-        <View style={{ gap: 8 }}>
-          <HeadingText style={{ color: "#000" }}>Progress</HeadingText>
-          <RegularText style={{ color: "#000" }}>
-            {params?.data.description}
-          </RegularText>
-        </View>
+        <Header title="Progress" description={params?.data.description} />
 
-        <View style={{ marginTop: 40, gap: 32 }}>
+        <View style={{ marginTop: 40, gap: 40, width: "100%" }}>
+          <View>
+            <SubHeadingText>Progress bar without progress label</SubHeadingText>
+            <View style={{ marginTop: 8, flexDirection: "row" }}>
+              <Progress value={progress} />
+            </View>
+          </View>
+
           <View>
             <SubHeadingText>
-              Basic progress bar without percentage label
+              Progress bar with progress percentage indicator
             </SubHeadingText>
-            <View style={{ marginTop: 8, gap: 4 }}>
-              <Progress value={progress} />
+            <View style={{ marginTop: 16 }}>
+              <Progress value={progress} showProgressIndicator />
             </View>
           </View>
         </View>
