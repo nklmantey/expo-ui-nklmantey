@@ -21,4 +21,27 @@ export const UIComponentsList: UIComponentsListType[] = [
     description:
       "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
   },
+  {
+    id: 5,
+    name: "Tabs",
+    description:
+      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+  },
+];
+
+export const socialLinks: SocialLinksType[] = [
+  {
+    id: 1,
+    name: "GitHub",
+    username: "@nklmantey",
+    url: "https://github.com/nklmantey",
+    icon: "logo-github",
+  },
+  {
+    id: 2,
+    name: "Twitter",
+    username: "@nklmantey",
+    url: "https://twitter.com/nklmantey",
+    icon: "logo-twitter",
+  },
 ];
