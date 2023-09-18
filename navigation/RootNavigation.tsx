@@ -8,6 +8,7 @@ import ButtonScreen from "../screens/ButtonScreen";
 import InputScreen from "../screens/InputScreen";
 import AlertScreen from "../screens/AlertScreen";
 import ProgressScreen from "../screens/ProgressScreen";
+import TabsScreen from "../screens/TabsScreen";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -28,6 +29,7 @@ const RootNavigation = () => {
         <Stack.Screen name="InputScreen" component={InputScreen} />
         <Stack.Screen name="AlertScreen" component={AlertScreen} />
         <Stack.Screen name="ProgressScreen" component={ProgressScreen} />
+        <Stack.Screen name="TabsScreen" component={TabsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

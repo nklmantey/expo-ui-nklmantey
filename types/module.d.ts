@@ -28,6 +28,13 @@ type RootStackParamList = {
           description: string;
         };
       };
+  TabsScreen:
+    | undefined
+    | {
+        data: {
+          description: string;
+        };
+      };
 };
 
 type UIComponentsListType = {
@@ -35,3 +42,11 @@ type UIComponentsListType = {
   name: string;
   description: string;
 };
+
+interface SocialLinksType {
+  id: number;
+  name: string;
+  username: string;
+  url: string;
+  icon: IconProps;
+}
