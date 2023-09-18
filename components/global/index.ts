@@ -6,6 +6,7 @@ import {
   SubHeadingText,
 } from "./StyledText";
 import Card from "./Card";
+import Header from "./Header";
 
 export {
   HeadingText,
@@ -13,5 +14,6 @@ export {
   BoldText,
   ExtraBoldText,
   RegularText,
+  Header,
   Card,
 };
