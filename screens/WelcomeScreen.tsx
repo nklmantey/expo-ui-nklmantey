@@ -47,6 +47,12 @@ export default function WelcomeScreen() {
           description: component.description,
         },
       }),
+    Select: (component: UIComponentsListType) =>
+      navigate("SelectScreen", {
+        data: {
+          description: component.description,
+        },
+      }),
   };
 
   return (

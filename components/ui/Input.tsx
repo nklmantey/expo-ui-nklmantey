@@ -39,7 +39,7 @@ export default function Input({
 
       <View
         style={{
-          flexDirection: isPassword ? "row" : "column",
+          flexDirection: isPassword ? "row" : undefined,
           height: 40,
           width: "100%",
           borderRadius: 6,

@@ -19,8 +19,8 @@ export default function Progress({
     <View
       style={{
         flex: 1,
-        flexDirection: showProgressIndicator ? "row" : "column",
-        alignItems: showProgressIndicator ? "center" : null,
+        flexDirection: showProgressIndicator ? "row" : undefined,
+        alignItems: showProgressIndicator ? "center" : undefined,
         gap: showProgressIndicator ? 8 : 0,
       }}
     >

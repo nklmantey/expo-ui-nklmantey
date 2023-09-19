@@ -1,10 +1,5 @@
 import { SafeAreaView, View } from "react-native";
-import {
-  Header,
-  HeadingText,
-  RegularText,
-  SubHeadingText,
-} from "../components/global";
+import { Header, SubHeadingText } from "../components/global";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { Progress } from "../components/ui";
 import { useEffect, useRef, useState } from "react";

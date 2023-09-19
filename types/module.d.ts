@@ -35,6 +35,13 @@ type RootStackParamList = {
           description: string;
         };
       };
+  SelectScreen:
+    | undefined
+    | {
+        data: {
+          description: string;
+        };
+      };
 };
 
 type UIComponentsListType = {

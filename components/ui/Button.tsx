@@ -40,7 +40,7 @@ export default function Button({
         borderRadius: 6,
         borderWidth: variant === "outline" ? 1 : 0,
         borderColor: variant === "outline" ? "#d3d3d3" : "",
-        flexDirection: icon ? "row" : "column",
+        flexDirection: icon ? "row" : undefined,
         gap: icon ? 12 : 0,
       }}
     >

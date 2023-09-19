@@ -27,6 +27,12 @@ export const UIComponentsList: UIComponentsListType[] = [
     description:
       "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
   },
+  {
+    id: 6,
+    name: "Select",
+    description:
+      "Displays a list of options for the user to pick from—triggered by a button.",
+  },
 ];
 
 export const socialLinks: SocialLinksType[] = [
