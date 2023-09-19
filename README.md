@@ -22,7 +22,7 @@ To run the app locally, follow these steps:
 1. Clone this repository and navigate into the project
    ```sh
    git clone https://github.com/nklmantey/expo-ui-nklmantey.git
-   cd convene
+   cd expo-ui-nklmantey
    ```
 2. Install necessary packages and dependencies
    ```sh
@@ -37,11 +37,13 @@ To run the app locally, follow these steps:
 <details>
 	<summary>View screenshots</summary>
 <p align="left">
-  <img src="screenshots/login2.jpg" width="320" style="border-radius:50%" />
-  <img src="screenshots/signup2.jpg" width="320" style="border-radius:50%" />
-  <img src="screenshots/home.jpg" width="320" style="border-radius:50%" />
-  <img src="screenshots/home-w-bs.jpg" width="320" style="border-radius:50%" />
-  <img src="screenshots/add-event.jpg" width="320" style="border-radius:50%" />
-  <img src="screenshots/settings.jpg" width="320" style="border-radius:50%" />
+  <img src="screenshots/welcome.jpg" width="320" style="border-radius:50%" />
+  <img src="screenshots/buttons.jpg" width="320" style="border-radius:50%" />
+  <img src="screenshots/input.jpg" width="320" style="border-radius:50%" />
+  <img src="screenshots/tabs.jpg" width="320" style="border-radius:50%" />
+  <img src="screenshots/progress-ongoing.jpg" width="320" style="border-radius:50%" />
+  <img src="screenshots/progress-100.jpg" width="320" style="border-radius:50%" />
+  <img src="screenshots/alert-with-cta.jpg" width="320" style="border-radius:50%" />
+  <img src="screenshots/alert-no-cta.jpg" width="320" style="border-radius:50%" />
 </p>
 </details>
