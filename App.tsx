@@ -1,8 +1,8 @@
 import "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
-import useCachedResources from "./hooks/useCachedResources";
 import RootNavigation from "./navigation/RootNavigation";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { useCachedResources } from "./hooks";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();

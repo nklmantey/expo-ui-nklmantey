@@ -49,6 +49,13 @@ type RootStackParamList = {
           description: string;
         };
       };
+  BottomSheetScreen:
+    | undefined
+    | {
+        data: {
+          description: string;
+        };
+      };
 };
 
 type UIComponentsListType = {

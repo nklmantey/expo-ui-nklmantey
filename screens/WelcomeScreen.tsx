@@ -10,56 +10,10 @@ import { UIComponentsList, socialLinks } from "../constants/data";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import * as Linking from "expo-linking";
+import { useComponentActions } from "../hooks";
 
 export default function WelcomeScreen() {
-  const { navigate }: NavigationProp<RootStackParamList> = useNavigation();
-
-  const componentActions: {
-    [key: string]: (component: UIComponentsListType) => void;
-  } = {
-    Button: (component) =>
-      navigate("ButtonScreen", {
-        data: {
-          description: component.description,
-        },
-      }),
-    Input: (component) =>
-      navigate("InputScreen", {
-        data: {
-          description: component.description,
-        },
-      }),
-    Alert: (component) =>
-      navigate("AlertScreen", {
-        data: {
-          description: component.description,
-        },
-      }),
-    Progress: (component: UIComponentsListType) =>
-      navigate("ProgressScreen", {
-        data: {
-          description: component.description,
-        },
-      }),
-    Tabs: (component: UIComponentsListType) =>
-      navigate("TabsScreen", {
-        data: {
-          description: component.description,
-        },
-      }),
-    Select: (component: UIComponentsListType) =>
-      navigate("SelectScreen", {
-        data: {
-          description: component.description,
-        },
-      }),
-    Skeleton: (component: UIComponentsListType) =>
-      navigate("SkeletonScreen", {
-        data: {
-          description: component.description,
-        },
-      }),
-  };
+  const componentActions = useComponentActions();
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>

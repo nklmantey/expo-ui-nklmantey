@@ -1,7 +1,7 @@
 import { View, SafeAreaView } from "react-native";
 import { Header, SubHeadingText } from "../components/global";
 import { RouteProp, useRoute } from "@react-navigation/native";
-import { Select, Skeleton } from "../components/ui";
+import { Skeleton } from "../components/ui";
 
 export default function SkeletonScreen() {
   const { params }: RouteProp<RootStackParamList> = useRoute();
@@ -31,23 +31,6 @@ export default function SkeletonScreen() {
               </View>
             </View>
           </View>
-
-          {/* <View>
-            <SubHeadingText>Select with users</SubHeadingText>
-            <View style={{ marginTop: 8 }}>
-              <Select
-                buttonTitle="Assign task to member"
-                items={[
-                  "Jason",
-                  "Michael",
-                  "Mantey",
-                  "Elsie",
-                  "Zanita",
-                  "Angela",
-                ]}
-              />
-            </View>
-          </View> */}
         </View>
       </View>
     </SafeAreaView>

@@ -38,6 +38,12 @@ export const UIComponentsList: UIComponentsListType[] = [
     name: "Skeleton",
     description: "Use to show a placeholder while content is loading.",
   },
+  {
+    id: 8,
+    name: "BottomSheet",
+    description:
+      "Extends the @gorhom/bottom-sheet package to display  an overlay that is anchored to the bottom of a screen and that displays additional details or actions.",
+  },
 ];
 
 export const socialLinks: SocialLinksType[] = [
