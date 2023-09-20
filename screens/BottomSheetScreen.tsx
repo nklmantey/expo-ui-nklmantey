@@ -3,13 +3,15 @@ import { Header, RegularText, SubHeadingText } from "../components/global";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { Button, Input } from "../components/ui";
 import BottomSheet, { BottomSheetBackdrop } from "@gorhom/bottom-sheet";
-import { useCallback, useMemo, useRef } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 export default function SkeletonScreen() {
   const { params }: RouteProp<RootStackParamList> = useRoute();
   const bottomSheetRef = useRef<BottomSheet>(null);
   const snapPoints = useMemo(() => ["5%", "50%"], []);
+  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
 
   const renderBackdrop = useCallback(
     (props: any) => (
@@ -62,19 +64,23 @@ export default function SkeletonScreen() {
           <View style={{ gap: 8, marginTop: 32, marginBottom: 16 }}>
             <Input
               placeholder="Enter your name"
-              onChangeText={() => {}}
-              value=""
+              onChangeText={(e) => setName(e)}
+              value={name}
             />
             <Input
               placeholder="Enter your username"
-              onChangeText={() => {}}
-              value=""
+              onChangeText={(e) => setUsername(e)}
+              value={username}
             />
           </View>
 
           <Button
             title="Save"
-            onPress={() => bottomSheetRef.current?.close()}
+            onPress={() => {
+              bottomSheetRef.current?.close();
+              setName("");
+              setUsername("");
+            }}
             variant="default"
           />
         </KeyboardAwareScrollView>
