@@ -53,6 +53,12 @@ export default function WelcomeScreen() {
           description: component.description,
         },
       }),
+    Skeleton: (component: UIComponentsListType) =>
+      navigate("SkeletonScreen", {
+        data: {
+          description: component.description,
+        },
+      }),
   };
 
   return (

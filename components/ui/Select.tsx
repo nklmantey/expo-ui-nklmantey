@@ -35,8 +35,9 @@ export default function Select({ buttonTitle, items }: SelectProps) {
               marginTop: 4,
             }}
           >
-            {items.map((item) => (
+            {items.map((item, index) => (
               <TouchableOpacity
+                key={index}
                 style={{
                   width: "100%",
                   borderRadius: 2,

@@ -33,6 +33,11 @@ export const UIComponentsList: UIComponentsListType[] = [
     description:
       "Displays a list of options for the user to pick from—triggered by a button.",
   },
+  {
+    id: 7,
+    name: "Skeleton",
+    description: "Use to show a placeholder while content is loading.",
+  },
 ];
 
 export const socialLinks: SocialLinksType[] = [

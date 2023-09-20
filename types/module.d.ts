@@ -42,6 +42,13 @@ type RootStackParamList = {
           description: string;
         };
       };
+  SkeletonScreen:
+    | undefined
+    | {
+        data: {
+          description: string;
+        };
+      };
 };
 
 type UIComponentsListType = {
