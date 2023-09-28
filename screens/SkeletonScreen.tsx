@@ -21,13 +21,14 @@ export default function SkeletonScreen() {
                 marginTop: 8,
                 flexDirection: "row",
                 gap: 8,
-                alignItems: "center",
+                alignItems: "flex-start",
               }}
             >
               <Skeleton height={50} width={50} borderRadius={25} />
               <View style={{ gap: 4, width: "100%" }}>
                 <Skeleton height={20} width={"80%"} borderRadius={6} />
                 <Skeleton height={20} width={"50%"} borderRadius={6} />
+                <Skeleton height={100} width={"80%"} borderRadius={6} />
               </View>
             </View>
           </View>
