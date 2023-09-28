@@ -18,14 +18,14 @@ export default function Select({ buttonTitle, items }: SelectProps) {
       <View style={{ width: "60%" }}>
         <Button
           variant="outline"
-          onPress={() => setIsSelectShown(true)}
+          onPress={() => setIsSelectShown((prev) => !prev)}
           title={selectItem ? selectItem : buttonTitle}
         />
 
         {isSelectShown && (
           <View
             style={{
-              backgroundColor: "white",
+              backgroundColor: "#fff",
               borderWidth: 1,
               borderColor: "#d3d3d3",
               padding: 4,
