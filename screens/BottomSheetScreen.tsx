@@ -1,5 +1,10 @@
-import { View, SafeAreaView } from "react-native";
-import { Header, RegularText, SubHeadingText } from "../components/global";
+import { View, SafeAreaView, Linking } from "react-native";
+import {
+  BoldText,
+  Header,
+  RegularText,
+  SubHeadingText,
+} from "../components/global";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { Button, Input } from "../components/ui";
 import BottomSheet, { BottomSheetBackdrop } from "@gorhom/bottom-sheet";
@@ -30,6 +35,56 @@ export default function SkeletonScreen() {
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
       <View style={{ padding: 20 }}>
         <Header title="Bottom Sheet" description={params?.data.description} />
+
+        <View
+          style={{
+            backgroundColor: "#fff",
+            width: "100%",
+            padding: 20,
+            marginTop: 20,
+            borderRadius: 4,
+            borderColor: "#d3d3d3",
+            borderWidth: 0.5,
+            alignItems: "flex-start",
+            justifyContent: "flex-start",
+          }}
+        >
+          <RegularText style={{ color: "#000", fontSize: 12 }}>
+            To use this component install the following packages {"\n"}
+          </RegularText>
+          <View style={{ gap: 8 }}>
+            <RegularText
+              style={{ textDecorationLine: "underline", fontSize: 12 }}
+              onPress={() =>
+                Linking.openURL(
+                  "https://gorhom.github.io/react-native-bottom-sheet/"
+                )
+              }
+            >
+              @gorhom/bottom-sheet
+            </RegularText>
+            <RegularText
+              onPress={() =>
+                Linking.openURL(
+                  "https://github.com/software-mansion/react-native-reanimated"
+                )
+              }
+              style={{ textDecorationLine: "underline", fontSize: 12 }}
+            >
+              react-native-reanimated
+            </RegularText>
+            <RegularText
+              style={{ textDecorationLine: "underline", fontSize: 12 }}
+              onPress={() =>
+                Linking.openURL(
+                  "https://github.com/software-mansion/react-native-gesture-handler"
+                )
+              }
+            >
+              react-native-gesture-handler
+            </RegularText>
+          </View>
+        </View>
 
         <View style={{ marginTop: 40 }}>
           <View>
