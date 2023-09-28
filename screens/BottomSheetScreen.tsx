@@ -1,10 +1,5 @@
 import { View, SafeAreaView, Linking } from "react-native";
-import {
-  BoldText,
-  Header,
-  RegularText,
-  SubHeadingText,
-} from "../components/global";
+import { Header, RegularText, SubHeadingText } from "../components/global";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { Button, Input } from "../components/ui";
 import BottomSheet, { BottomSheetBackdrop } from "@gorhom/bottom-sheet";
