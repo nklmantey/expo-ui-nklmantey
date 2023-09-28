@@ -6,11 +6,12 @@ import {
   View,
 } from "react-native";
 import { BoldText, Card, HeadingText, RegularText } from "../components/global";
-import { UIComponentsList, socialLinks } from "../constants/data";
+import { UIComponentsList, mySocials } from "../constants/data";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import * as Linking from "expo-linking";
 import { useComponentActions } from "../hooks";
+import SocialCard from "../components/ui/SocialCard";
 
 export default function WelcomeScreen() {
   const componentActions = useComponentActions();
@@ -54,50 +55,8 @@ export default function WelcomeScreen() {
               gap: 8,
             }}
           >
-            {socialLinks.map((social) => (
-              <TouchableOpacity
-                key={social.id}
-                onPress={() => Linking.openURL(social.url)}
-                style={{
-                  backgroundColor: "transparent",
-                  borderColor: "#d3d3d3",
-                  borderWidth: 0.5,
-                  width: "48%",
-                  padding: 20,
-                  borderRadius: 4,
-                  alignItems: "flex-start",
-                  justifyContent: "center",
-                  gap: 8,
-                }}
-              >
-                <View
-                  style={{ flexDirection: "row", alignItems: "center", gap: 4 }}
-                >
-                  <Ionicons name={social.icon} size={20} color={"#000"} />
-                  <BoldText style={{ color: "#000" }}>{social.name}</BoldText>
-                </View>
-                <View
-                  style={{ flexDirection: "row", alignItems: "center", gap: 4 }}
-                >
-                  <RegularText
-                    style={{
-                      color: "#000",
-                      fontSize: 12,
-                      textDecorationLine: "underline",
-                    }}
-                  >
-                    {social.username}
-                  </RegularText>
-                  <Ionicons
-                    name="arrow-up-outline"
-                    size={14}
-                    color={"#d3d3d3"}
-                    style={{
-                      transform: [{ rotate: "45deg" }],
-                    }}
-                  />
-                </View>
-              </TouchableOpacity>
+            {mySocials.map((social) => (
+              <SocialCard key={social.id} {...social} />
             ))}
           </View>
         </View>

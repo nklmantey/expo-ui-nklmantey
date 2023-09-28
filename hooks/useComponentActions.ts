@@ -54,6 +54,12 @@ export default function useComponentAction() {
           description: component.description,
         },
       }),
+    "Social Card": (component: UIComponentsListType) =>
+      navigate("SocialCardScreen", {
+        data: {
+          description: component.description,
+        },
+      }),
   };
 
   return componentActions;

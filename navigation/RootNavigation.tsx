@@ -12,6 +12,7 @@ import TabsScreen from "../screens/TabsScreen";
 import SelectScreen from "../screens/SelectScreen";
 import SkeletonScreen from "../screens/SkeletonScreen";
 import BottomSheetScreen from "../screens/BottomSheetScreen";
+import SocialCardScreen from "../screens/SocialCardScreen";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -36,6 +37,7 @@ const RootNavigation = () => {
         <Stack.Screen name="SelectScreen" component={SelectScreen} />
         <Stack.Screen name="SkeletonScreen" component={SkeletonScreen} />
         <Stack.Screen name="BottomSheetScreen" component={BottomSheetScreen} />
+        <Stack.Screen name="SocialCardScreen" component={SocialCardScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
