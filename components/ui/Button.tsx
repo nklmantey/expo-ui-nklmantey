@@ -48,7 +48,6 @@ export default function Button({
         <ActivityIndicator color="#fff" />
       ) : (
         <>
-          {icon && icon}
           <RegularText
             style={{
               color:
@@ -59,6 +58,7 @@ export default function Button({
           >
             {title}
           </RegularText>
+          {icon && icon}
         </>
       )}
     </TouchableOpacity>
