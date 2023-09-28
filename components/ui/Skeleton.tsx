@@ -17,19 +17,19 @@ export default function Skeleton({
   const pulseAnimation = () => {
     Animated.sequence([
       Animated.timing(opacityValue, {
-        toValue: 0.3,
-        duration: 1500,
+        toValue: 0.2,
+        duration: 1000,
         easing: Easing.linear,
         useNativeDriver: true,
       }),
       Animated.timing(opacityValue, {
         toValue: 1,
-        duration: 1500,
+        duration: 1000,
         easing: Easing.linear,
         useNativeDriver: true,
       }),
     ]).start(() => {
-      pulseAnimation(); // Restart the pulse animation after it's done
+      pulseAnimation();
     });
   };
 
