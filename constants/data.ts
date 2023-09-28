@@ -44,21 +44,81 @@ export const UIComponentsList: UIComponentsListType[] = [
     description:
       "Extends the @gorhom/bottom-sheet package to display  an overlay that is anchored to the bottom of a screen and that displays additional details or actions.",
   },
+  {
+    id: 9,
+    name: "Social Card",
+    description: "Displays a card with a social icon and a username.",
+  },
 ];
 
-export const socialLinks: SocialLinksType[] = [
+enum SocialCardOptions {
+  DRIBBBLE = "Dribbble",
+  FACEBOOK = "Facebook",
+  GITHUB = "GitHub",
+  INSTAGRAM = "Instagram",
+  LINKEDIN = "LinkedIn",
+  PINTEREST = "DISCORD",
+  PLAYSTATION = "PlayStation",
+  REDDIT = "Reddit",
+  SNAPCHAT = "Snapchat",
+  STACKOVERFLOW = "StackOverflow",
+  STEAM = "Steam",
+  TWITCH = "Twitch",
+  TWITTER = "Twitter",
+  WHATSAPP = "WhatsApp",
+  XBOX = "Xbox",
+  YAHOO = "Yahoo",
+  YOUTUBE = "YouTube",
+}
+
+export const mySocials = [
   {
     id: 1,
-    name: "GitHub",
+    type: SocialCardOptions.GITHUB,
     username: "@nklmantey",
     url: "https://github.com/nklmantey",
-    icon: "logo-github",
   },
   {
     id: 2,
-    name: "Twitter",
+    type: SocialCardOptions.TWITTER,
     username: "@nklmantey",
     url: "https://twitter.com/nklmantey",
-    icon: "logo-twitter",
+  },
+];
+
+export const socialLinks = [
+  {
+    id: 1,
+    type: SocialCardOptions.GITHUB,
+    username: "@nklmantey",
+    url: "https://github.com/nklmantey",
+  },
+  {
+    id: 2,
+    type: SocialCardOptions.TWITTER,
+    username: "@nklmantey",
+    url: "https://twitter.com/nklmantey",
+  },
+  {
+    id: 3,
+    type: SocialCardOptions.LINKEDIN,
+    username: "@nklmantey",
+    url: "https://linkedin.com/in/nklmantey",
+  },
+  {
+    id: 4,
+    type: SocialCardOptions.REDDIT,
+    username: "@nklmantey",
+  },
+  {
+    id: 5,
+    type: SocialCardOptions.PLAYSTATION,
+    username: "@nklmantey",
+  },
+  {
+    id: 6,
+    type: SocialCardOptions.SNAPCHAT,
+    username: "@nklmantey",
+    url: "https://snapchat.com/nklmantey",
   },
 ];
